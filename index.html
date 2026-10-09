@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saiway Logistics | Professional Truck Dispatching</title>
+  <meta name="description" content="Saiway Logistics provides professional truck dispatching, load search, rate negotiation and carrier support across the USA.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; color: #17243a; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    .container { width: 90%; max-width: 1150px; margin: auto; }
+    .top { background: #07152d; color: white; padding: 10px 5%; text-align: right; font-size: 13px; }
+    .top a { margin-left: 18px; }
+    header { background: white; padding: 18px 5%; display: flex; align-items: center; justify-content: space-between; gap: 20px; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #e5eaf1; }
+    .logo { font-size: 23px; font-weight: 900; color: #07152d; }
+    .logo span { color: #1677ff; }
+    nav { display: flex; align-items: center; gap: 20px; font-size: 13px; font-weight: bold; }
+    nav a:hover { color: #1677ff; }
+    .button { display: inline-block; background: #1677ff; color: white; padding: 12px 20px; border-radius: 5px; font-weight: bold; border: 0; cursor: pointer; }
+    .hero { color: white; padding: 110px 0; background: linear-gradient(90deg,rgba(4,14,31,.94),rgba(4,14,31,.55)),url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2000&q=85") center/cover; }
+    .hero .container { max-width: 1150px; }
+    .eyebrow { color: #65b2ff; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; }
+    h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.08; margin: 15px 0; max-width: 760px; }
+    h1 span, .blue { color: #43a2ff; }
+    .hero p { max-width: 650px; font-size: 18px; margin: 20px 0 25px; }
+    .outline { display: inline-block; padding: 11px 18px; border: 1px solid white; border-radius: 5px; margin-left: 8px; }
+    .stats { display: grid; grid-template-columns: repeat(4,1fr); background: white; box-shadow: 0 8px 30px #07152d18; margin-top: -30px; position: relative; border-radius: 8px; padding: 25px 10px; text-align: center; }
+    .stats strong { display: block; font-size: 25px; color: #07152d; }
+    .stats span { font-size: 12px; color: #667085; font-weight: bold; }
+    section { padding: 75px 0; }
+    .section-title { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+    .section-title h2 { font-size: clamp(28px,4vw,40px); color: #07152d; line-height: 1.2; margin: 8px 0 12px; }
+    .section-title p, .muted { color: #667085; }
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; }
+    .about img { width: 100%; height: 420px; object-fit: cover; border-radius: 8px; }
+    h2 { color: #07152d; }
+    .about h2 { font-size: 38px; line-height: 1.2; margin: 10px 0 18px; }
+    .about p { margin: 12px 0; color: #667085; }
+    ul.checks { list-style: none; margin: 20px 0; }
+    .checks li { margin: 8px 0; font-weight: bold; }
+    .checks li:before { content: "✓"; color: #1677ff; margin-right: 10px; }
+    .light { background: #f5f8fc; }
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .card { background: white; border: 1px solid #e5eaf1; padding: 25px; border-radius: 8px; }
+    .card .icon { font-size: 27px; margin-bottom: 10px; }
+    .card h3 { color: #07152d; margin-bottom: 8px; }
+    .card p { color: #667085; font-size: 14px; }
+    .dark { background: #07152d; color: white; }
+    .dark .section-title h2 { color: white; }
+    .dark .section-title p { color: #bdc9d9; }
+    .dark .card { background: #102440; color: white; border-color: #263952; }
+    .dark .card h3 { color: white; }
+    .dark .card p { color: #bdc9d9; }
+    .trucks { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; }
+    .truck { text-align: center; border: 1px solid #e5eaf1; border-radius: 8px; padding: 22px 8px; font-weight: bold; }
+    .truck div { font-size: 30px; margin-bottom: 8px; }
+    .cta { background: linear-gradient(90deg,rgba(7,21,45,.96),rgba(7,21,45,.78)),url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1800&q=85") center/cover; color: white; padding: 45px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+    .cta h2 { color: white; font-size: 32px; }
+    .cta p { color: #d2deed; margin-top: 8px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; }
+    .contact-info h2 { font-size: 35px; }
+    .contact-info p { color: #667085; margin: 12px 0 25px; }
+    .contact-item { margin: 17px 0; }
+    .contact-item strong { display: block; color: #1677ff; font-size: 11px; letter-spacing: 1.5px; }
+    .form { background: white; border: 1px solid #e5eaf1; border-radius: 8px; padding: 25px; box-shadow: 0 8px 30px #07152d0d; }
+    .form h3 { margin-bottom: 15px; color: #07152d; font-size: 22px; }
+    .form input, .form select, .form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #dce3ec; border-radius: 5px; font: inherit; font-size: 14px; }
+    .form textarea { min-height: 105px; resize: vertical; }
+    .form button { width: 100%; font-size: 14px; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    footer { background: #040d1c; color: white; padding: 45px 0 18px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 35px; padding-bottom: 30px; }
+    footer h4 { margin-bottom: 10px; }
+    footer p, footer li { color: #91a1b7; font-size: 13px; }
+    footer ul { list-style: none; }
+    footer li { margin: 7px 0; }
+    .bottom { border-top: 1px solid #ffffff20; padding-top: 15px; text-align: center; color: #91a1b7; font-size: 12px; }
+    .whatsapp { position: fixed; right: 18px; bottom: 18px; background: #25d366; color: white; border-radius: 50%; width: 55px; height: 55px; display: grid; place-items: center; font-size: 24px; z-index: 20; }
+    @media (max-width: 850px) {
+      header { flex-wrap: wrap; }
+      nav { width: 100%; flex-wrap: wrap; gap: 12px; }
+      .about, .contact-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .trucks { grid-template-columns: repeat(3,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .top { text-align: center; font-size: 11px; }
+      .top a { margin: 0 5px; }
+      header { position: static; }
+      nav { font-size: 12px; }
+      .hero { padding: 75px 0; }
+      .hero p { font-size: 16px; }
+      .outline { margin: 10px 0 0; }
+      .stats { grid-template-columns: repeat(2,1fr); gap: 18px; }
+      section { padding: 55px 0; }
+      .cards, .two, .footer-grid { grid-template-columns: 1fr; }
+      .trucks { grid-template-columns: repeat(2,1fr); }
+      .cta { padding: 28px; flex-direction: column; align-items: flex-start; }
+      .about img { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <a href="mailto:info@saiwaylogistics.com">✉ info@saiwaylogistics.com</a>
+    <a href="tel:+17782236435">☎ +1 (778) 223-6435</a>
+  </div>
+
+  <header>
+    <a class="logo" href="#">SAIWAY <span>LOGISTICS</span></a>
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#why">WHY US</a>
+      <a href="#equipment">EQUIPMENT</a>
+      <a href="#contact">CONTACT</a>
+      <a class="button" href="#contact">BECOME A CARRIER</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Professional USA Truck Dispatching</div>
+      <h1>Keep Your <span>Trucks Moving.</span></h1>
+      <p>Reliable dispatch support for owner-operators and trucking companies — from finding the right loads to broker communication and paperwork.</p>
+      <a class="button" href="#contact">GET STARTED →</a>
+      <a class="outline" href="tel:+17782236435">☎ CALL SAIWAY</a>
+      <p>✓ Carrier Focused &nbsp;&nbsp; ✓ Professional Support &nbsp;&nbsp; ✓ USA Service Area</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats">
+      <div><strong>24/7</strong><span>Dispatch Support</span></div>
+      <div><strong>USA</strong><span>Service Area</span></div>
+      <div><strong>100%</strong><span>Carrier Focused</span></div>
+      <div><strong>6+</strong><span>Dispatch Services</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container about">
+      <div>
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=85" alt="American truck on highway">
+      </div>
+      <div>
+        <div class="eyebrow">About Saiway Logistics</div>
+        <h2>Your Partner <span class="blue">On The Road</span></h2>
+        <p>Saiway Logistics provides professional truck dispatching support for carriers and owner-operators across the United States.</p>
+        <p>Our goal is simple — help carriers spend less time searching for loads and more time keeping their trucks moving.</p>
+        <ul class="checks">
+          <li>Load Search & Booking</li>
+          <li>Rate Negotiation Support</li>
+          <li>Broker Communication</li>
+          <li>Route Planning</li>
+          <li>Dispatch & Paperwork Support</li>
+        </ul>
+        <a class="button" href="#contact">WORK WITH US →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="light" id="services">
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">What We Do</div>
+        <h2>Professional Dispatch Services</h2>
+        <p>Complete dispatch support designed to keep your operation organized and moving.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="icon">🔎</div><h3>Load Searching</h3><p>Find loads based on your equipment, preferred lanes and operation requirements.</p></div>
+        <div class="card"><div class="icon">💰</div><h3>Rate Negotiation</h3><p>Professional broker communication and support with rate discussions.</p></div>
+        <div class="card"><div class="icon">📍</div><h3>Route Planning</h3><p>Plan practical lanes and help reduce unnecessary deadhead miles.</p></div>
+        <div class="card"><div class="icon">📞</div><h3>Broker Communication</h3><p>Coordinate with brokers and help manage important load details.</p></div>
+        <div class="card"><div class="icon">📋</div><h3>Paperwork Support</h3><p>Support with rate confirmations, load information and dispatch documents.</p></div>
+        <div class="card"><div class="icon">⏱</div><h3>Dispatch Support</h3><p>Reliable day-to-day support so you can stay focused on operating your truck.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="why">
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">Why Saiway</div>
+        <h2>Built Around Your Business</h2>
+        <p>Our approach is focused on communication, consistency and carrier support.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="eyebrow">01</div><h3>Carrier Focused</h3><p>Your equipment, lanes and business requirements stay at the center of the dispatch process.</p></div>
+        <div class="card"><div class="eyebrow">02</div><h3>Professional</h3><p>Clear and professional communication with brokers and carriers.</p></div>
+        <div class="card"><div class="eyebrow">03</div><h3>Reliable</h3><p>Consistent dispatch support for your day-to-day trucking operation.</p></div>
+        <div class="card"><div class="eyebrow">04</div><h3>Growth Mindset</h3><p>Helping carriers stay focused on operating and growing their business.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipment">
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">Equipment</div>
+        <h2>Truck Types We Support</h2>
+        <p>Select your equipment when you contact us for dispatch support.</p>
+      </div>
+      <div class="trucks">
+        <div class="truck"><div>🚛</div>Dry Van</div>
+        <div class="truck"><div>❄️</div>Reefer</div>
+        <div class="truck"><div>🚚</div>Flatbed</div>
+        <div class="truck"><div>📦</div>Box Truck</div>
+        <div class="truck"><div>🛻</div>Hotshot</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container cta">
+      <div>
+        <h2>Ready To Keep Your Truck Moving?</h2>
+        <p>Tell us about your equipment and trucking operation and let's discuss your dispatching requirements.</p>
+      </div>
+      <a class="button" href="#contact">BECOME A CARRIER →</a>
+    </div>
+  </section>
+
+  <section class="light" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">Contact Us</div>
+        <h2>Let's Get Your Truck Moving</h2>
+        <p>Complete the form and your information will open directly in WhatsApp.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Saiway Logistics</h2>
+          <p>Professional truck dispatching support for owner-operators and trucking companies across the United States.</p>
+          <div class="contact-item"><strong>PHONE</strong><a href="tel:+17696025510">+1 769-602-5510</a></div>
+          <div class="contact-item"><strong>WHATSAPP</strong><a href="https://wa.me/17782236435" target="_blank">+1 (778) 223-6435</a></div>
+          <div class="contact-item"><strong>EMAIL</strong><a href="mailto:info@saiwaylogistics.com">info@saiwaylogistics.com</a></div>
+          <div class="contact-item"><strong>SERVICE AREA</strong><span>United States</span></div>
+          <div class="contact-item"><strong>BUSINESS HOURS</strong><span>Monday – Saturday</span></div>
+        </div>
+        <form class="form" onsubmit="sendToWhatsApp(event)">
+          <h3>Request A Free Quote</h3>
+          <div class="two">
+            <input id="name" type="text" placeholder="Full Name" required>
+            <input id="phone" type="tel" placeholder="Phone Number" required>
+          </div>
+          <input id="email" type="email" placeholder="Email Address" required>
+          <div class="two">
+            <select id="truck" required>
+              <option value="">Select Truck Type</option><option>Dry Van</option><option>Reefer</option><option>Flatbed</option><option>Box Truck</option><option>Hotshot</option><option>Other</option>
+            </select>
+            <select id="service" required>
+              <option value="">Select Service</option><option>Full Dispatch Service</option><option>Load Search</option><option>Rate Negotiation</option><option>Broker Communication</option><option>Route Planning</option><option>Other</option>
+            </select>
+          </div>
+          <textarea id="message" placeholder="Tell us about your truck, lanes or dispatch requirements..."></textarea>
+          <button class="button" type="submit">REQUEST FREE QUOTE →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="logo" style="color:white">SAIWAY <span>LOGISTICS</span></div><p style="margin-top:12px">Professional truck dispatching and logistics support helping carriers stay organized, loaded and moving.</p></div>
+        <div><h4>QUICK LINKS</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#why">Why Us</a></li><li><a href="#equipment">Equipment</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div><h4>CONTACT</h4><ul><li><a href="tel:+17782236435">+1 (778) 223-6435</a></li><li><a href="mailto:info@saiwaylogistics.com">info@saiwaylogistics.com</a></li><li>United States</li></ul></div>
+      </div>
+      <div class="bottom">© 2026 Saiway Logistics. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/17782236435" target="_blank" title="WhatsApp">◉</a>
+
+  <script>
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const truck = document.getElementById("truck").value;
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value;
+      const text = `Hello Saiway Logistics,\n\nI would like to know more about your dispatch services.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nTruck Type: ${truck}\nService Required: ${service}\nMessage: ${message}`;
+      window.open("https://wa.me/17782236435?text=" + encodeURIComponent(text), "_blank");
+    }
+  </script>
+</body>
+</html>
